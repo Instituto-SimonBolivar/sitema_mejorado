@@ -11,41 +11,67 @@
                      <ul class="navbar-nav mr-auto">
                         
                         <li class="nav-item">
-                           <a class="nav-link" href="index.html"> Inicio </a>
+                           <a class="nav-link" href="index.html"
+                              data-toggle="tooltip" data-placement="right" title="Página principal del proyecto y visión general del Instituto Simón Bolívar.">
+                              Inicio
+                           </a>
                         </li>
 
                         <li class="nav-item dropdown">
-                           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownEstruc" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownEstruc" role="button"
+                              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                              data-toggle="tooltip" data-placement="right"
+                              title="Modelado del sistema mediante Diagramas de Flujo de Datos (DFD) y Lista de Acontecimientos (L.A.).">
                               Análisis Estructurado
                            </a>
                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownEstruc">
-                                 <li><a class="dropdown-item" href="Modelo_Ambiental.html"> Modelo Ambiental </a></li>
-                                 <li><a class="dropdown-item" href="Modelo_Comportamiento.html"> Modelo de Comportamiento </a></li>
+                                 <li><a class="dropdown-item" href="Modelo_Ambiental.html"
+                                    data-toggle="tooltip" data-placement="right" title="Identificación del sistema, su alcance (Declaración de Propósitos), las fronteras (Diagrama de Contexto) y los eventos (Lista de Acontecimientos).">
+                                    Modelo Ambiental </a></li>
+                                 <li><a class="dropdown-item" href="Modelo_Comportamiento.html"
+                                    data-toggle="tooltip" data-placement="right" title="Desglose detallado de los procesos internos del sistema, incluyendo DFD de Nivel 1 y Nivel 2.">
+                                    Modelo de Comportamiento </a></li>
                            </ul>
                         </li>
 
                         <li class="nav-item dropdown">
-                           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownOO" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownOO" role="button"
+                              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                              data-toggle="tooltip" data-placement="right"
+                              title="Diseño del sistema usando la notación UML (Diagramas de Clases, Casos de Uso, Secuencia, etc.).">
                               Orientado a Objetos
                            </a>
                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownOO">
-                              <li><a class="dropdown-item" href="OO.html"> Diagramas UML </a></li>
+                              <li><a class="dropdown-item" href="Modelo_OO.html"
+                                 data-toggle="tooltip" data-placement="right" title="Representación de la estructura estática del sistema mediante Diagramas de Clases y el comportamiento dinámico.">
+                                 Diagramas UML </a></li>
                            </ul>
                         </li>
 
                         <li class="nav-item">
-                           <a class="nav-link" href="marco.html"> Marco Teórico </a>
+                           <a class="nav-link" href="marco.html"
+                              data-toggle="tooltip" data-placement="right" 
+                              title="Fundamentos teóricos, antecedentes, metodología y planificación del proyecto.">
+                              Marco Teórico
+                           </a>
                         </li>
 
                         <li class="nav-item">
-                           <a class="nav-link" href="vid_1.html"> Videos y Tutoriales </a>
+                           <a class="nav-link" href="Videos.html"
+                              data-toggle="tooltip" data-placement="right" 
+                              title="Tutoriales y explicaciones audiovisuales de los modelos y diagramas utilizados.">
+                              Videos y Tutoriales
+                           </a>
                         </li>
 
                         <li class="nav-item">
-                           <a class="nav-link" href="contacto_desarrolladores.html"> Contacto Desarrolladores </a>
+                           <a class="nav-link" href="contacto_desarrolladores.html"
+                              data-toggle="tooltip" data-placement="right" 
+                              title="Información de contacto (correos y WhatsApp) de los integrantes del equipo desarrollador.">
+                              Contacto Desarrolladores
+                           </a>
                         </li>
-
-
+                        
                      </ul>
                   </div>
                </nav>
@@ -61,3 +87,10 @@
       </div>
    </div>
 </div>
+
+<script>
+    // Se mantiene la inicialización para asegurar el funcionamiento.
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip();
+    })
+</script>
