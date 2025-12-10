@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <title>Tutoriales de Modelado - ITSB</title>
+    
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+
+    <style>
+        /* Estilo para el índice lateral */
+        .index-sidebar {
+            position: sticky; 
+            top: 100px; 
+            padding-top: 20px;
+        }
+        .index-sidebar .list-group-item {
+            border: none;
+            padding: 5px 15px;
+            font-size: 14px;
+            color: #495057;
+            border-left: 3px solid transparent;
+        }
+        .index-sidebar .list-group-item.active {
+            background-color: #f8f9fa;
+            color: #007bff;
+            font-weight: bold;
+            border-left: 3px solid #007bff;
+        }
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            background: #000;
+            margin-top: 20px;
+            border: 1px solid #ddd;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body class="main-layout">
+    <div class="loader_bg">
+        <div class="loader"><img src="images/loading.gif" alt="#"/></div>
+    </div>
+
+    <header>
+        <div id="main-header"></div> 
+    </header>
+
+    <div class="main-content">
+        <div class="container py-5">
+            <h1 class="text-center mb-5" style="color: #007bff; font-weight: bold;">V. VIDEOS Y TUTORIALES DEL PROYECTO</h1>
+            <hr class="mb-5">
+            
+            <div class="row">
+                <div class="col-md-3 d-none d-md-block">
+                    <div class="index-sidebar">
+                        <h4 class="mb-3" style="color: #007bff;">Tutoriales</h4>
+                        <div class="list-group">
+                            <a class="list-group-item list-group-item-action active" href="CUN">1. Casos de Usos de Negocio</a>
+                            <a class="list-group-item list-group-item-action" href="C2">2.</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-9">
+                    
+                    <div id="CUN" class="diagram-box mb-5">
+                        <h2 class="mt-4">1. Tutorial: Casos de Usos de Negocio</h2>
+                        <div class="video-container">
+                            <iframe 
+                                src="https://www.youtube.com/embed/6617xaesbHY" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        <p class="text-muted mt-2">Fuente: Tutorial Casos de Uso de Negocio - ITSB</p>
+                    </div>
+
+                    <div id="C2" class="diagram-box mb-5">
+                        <h2 class="mt-4">2. Tutorial: Diagramas de Flujo de Datos (DFD) y Entidad-Relación (DER)</h2>
+                        <p>Aquí se muestra la descomposición del DFD a Nivel 0 y la construcción del Diagrama Entidad-Relación, definiendo el flujo de los datos y la estructura de la base de datos necesaria para el sistema multi-sede.</p>
+
+                        <div class="video-container">
+                            <iframe 
+                                src="https://www.youtube.com/embed/VIDEO_YOUTUBE_ID_2" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        <p class="text-muted mt-2">Fuente: Tutorial Modelo de Comportamiento (DFD/DER) - ITSB</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div id="main-footer"></div> 
+    </footer>
+    
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.0.0.min.js"></script> 
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="js/custom.js"></script> 
+    <script>
+        $(function () {
+            $("#main-header").load("header.html");
+            $("#main-footer").load("footer.html"); 
+            // Script para resaltar el elemento activo en el índice lateral
+            $('.index-sidebar a').on('click', function() {
+                $('.index-sidebar a').removeClass('active');
+                $(this).addClass('active');
+            });
+        });
+    </script>
+</body>
+</html>

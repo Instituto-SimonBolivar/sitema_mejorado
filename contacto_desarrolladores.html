@@ -15,6 +15,77 @@
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
 
+    <style>
+        /* Estilos específicos para la tarjeta de desarrollador */
+        .developer_card {
+            background: #fff;
+            padding: 30px;
+            text-align: center;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            height: 100%; 
+        }
+        .developer_card:hover {
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            transform: translateY(-5px);
+        }
+        /* Ajuste de imagen al círculo */
+        .developer_card img {
+            width: 120px; 
+            height: 120px;
+            border-radius: 50%; /* Esto crea el círculo */
+            margin-bottom: 15px;
+            border: 3px solid #007bff;
+            object-fit: cover; /* Adapta la imagen al círculo sin distorsión */
+        }
+        .developer_card h3 {
+            font-size: 20px;
+            font-weight: bold;
+            color: #007bff;
+            margin-bottom: 5px;
+        }
+        .developer_card span {
+            display: block;
+            font-size: 14px;
+            color: #495057;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        /* Ajuste de texto para evitar desbordamiento */
+        .developer_card p {
+            font-size: 14px;
+            color: #6c757d;
+            min-height: 40px; 
+            text-align: center; 
+            word-wrap: break-word; 
+            overflow-wrap: break-word;
+        }
+        .social_icon {
+            list-style: none;
+            padding: 0;
+            margin-top: 15px;
+            display: flex;
+            justify-content: center;
+        }
+        .social_icon li {
+            margin: 0 10px;
+        }
+        .social_icon li a {
+            color: #007bff;
+            font-size: 20px;
+            transition: color 0.3s;
+        }
+        .social_icon li a:hover {
+            color: #0056b3;
+        }
+        .social_icon .fa-whatsapp {
+            color: #25D366; 
+            font-size: 24px;
+        }
+    </style>
+
 </head>
 
 <body class="main-layout">
@@ -26,83 +97,66 @@
         <div id="main-header"></div> 
     </header>
 
-    <div class="content-page-wrapper">
-        <div class="container">
+    <div class="main-content">
+        <div class="container py-5">
+            <h1 class="text-center mb-5" style="color: #007bff; font-weight: bold;">VI. CONTACTO DEL EQUIPO DESARROLLADOR</h1>
+            <hr class="mb-5">
+            
             <div class="row">
-                <div class="col-md-12">
-                    <div class="titlepage">
-                        <h2 class="text-center">Equipo de Desarrollo</h2>
-                        <p class="text-center">Conoce a los integrantes y sus roles dentro del proyecto de Análisis y Diseño de Sistemas (ITSB).</p>
-                        <hr>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row team_section justify-content-center">
-                
-                <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="col-lg-6 col-md-6 col-sm-12">
                     <div class="developer_card">
-                        <figure><img src="#"  /></figure>
-                        <h3>[Desarrollador 1]</h3>
-                        <span>Líder de Proyecto</span>
-                        <p>Responsable principal de la coordinación, planificación y validación de todos los modelos del sistema.</p>
+                        <img src="images/perfil.png" alt="Foto de Luis Ernesto Canqui Tarifa" />
+                        <h3>Canqui Tarifa Luis Ernesto</h3>
+                        <span>LÍDER DEL PROYECTO</span>
+                        <p>Responsable de la coordinación general, la planificación de hitos y la integración de todos los modelos y artefactos del proyecto.</p>
                         <ul class="social_icon">
-                            <li><a href="mailto:dev1@email.com"><i class="fa fa-envelope-o"></i></a></li>
+                            <li><a href="https://wa.me/59160655355" target="_blank"><i class="fa fa-whatsapp"></i></a></li>
+                            <li><a href="mailto:ctarifal@fcpn.edu.bo"><i class="fa fa-envelope-o"></i></a></li>
                             <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
                             <li><a href="#"><i class="fa fa-github"></i></a></li>
                         </ul>
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="col-lg-6 col-md-6 col-sm-12">
                     <div class="developer_card">
-                        <figure><img src="#" /></figure>
-                        <h3>[Desarrollador 2]</h3>
-                        <span>Modelado Estructurado</span>
-                        <p>Especialista en la creación de DFD, D.C y documentación del Modelo Ambiental.</p>
+                        <img src="images/perfil.png" alt="Foto de Jhonny Efrain Carvajal Ajata" />
+                        <h3>Carvajal Ajata Jhonny Efrain</h3>
+                        <span>MODELADO DE DATOS (DER)</span>
+                        <p>Encargado del diseño de la estructura de la base de datos y la diagramación Entidad-Relación (DER) del sistema.</p>
                         <ul class="social_icon">
-                            <li><a href="mailto:dev2@email.com"><i class="fa fa-envelope-o"></i></a></li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                            <li><a href="#"><i class="fa fa-github"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12">
-                    <div class="developer_card">
-                        <figure><img src="#" /></figure>
-                        <h3>[Desarrollador 3]</h3>
-                        <span>Modelado de Datos (DER)</span>
-                        <p>Encargado de la definición de la estructura de la base de datos y la integridad de los almacenes.</p>
-                        <ul class="social_icon">
-                            <li><a href="mailto:dev3@email.com"><i class="fa fa-envelope-o"></i></a></li>
+                            <li><a href="https://wa.me/591785679779" target="_blank"><i class="fa fa-whatsapp"></i></a></li>
+                            <li><a href="mailto:acarvajalj@fcpn.edu.bo"><i class="fa fa-envelope-o"></i></a></li>
                             <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
                             <li><a href="#"><i class="fa fa-github"></i></a></li>
                         </ul>
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="col-lg-6 col-md-6 col-sm-12">
                     <div class="developer_card">
-                        <figure><img src="#"  /></figure>
-                        <h3>[Desarrollador 4]</h3>
-                        <span>Frontend/Diseño UX</span>
-                        <p>Responsable del diseño de la interfaz (HTML/CSS) y la usabilidad de la página web.</p>
+                        <img src="images/perfil.png" alt="Foto de Julio Jhosep Grajeda Gutierrez" />
+                        <h3>Grajeda Gutierrez Julio Jhosep</h3>
+                        <span>MODELADO ESTRUCTURADO (DFD/DFDi)</span>
+                        <p>Responsable del Modelado Ambiental (Contexto) y Modelado de Comportamiento (DFDs y Lista de Acontecimientos).</p>
                         <ul class="social_icon">
-                            <li><a href="mailto:dev4@email.com"><i class="fa fa-envelope-o"></i></a></li>
+                            <li><a href="https://wa.me/59162524200" target="_blank"><i class="fa fa-whatsapp"></i></a></li>
+                            <li><a href="mailto:ggrajedaj@fcpn.edu.bo"><i class="fa fa-envelope-o"></i></a></li>
                             <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
                             <li><a href="#"><i class="fa fa-github"></i></a></li>
                         </ul>
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="col-lg-6 col-md-6 col-sm-12">
                     <div class="developer_card">
-                        <figure><img src="#" /></figure>
-                        <h3>[Desarrollador 5]</h3>
-                        <span>Modelado Orientado a Objetos</span>
-                        <p>Experto en UML, a cargo de los diagramas de Clases, Objetos y Casos de Uso.</p>
+                        <img src="images/perfil.png" alt="Foto de Alan Jorge Tarqui Chambi" />
+                        <h3>Tarqui Chambi Alan Jorge</h3>
+                        <span>FRONTEND / DISEÑO UX</span>
+                        <p>A cargo de la implementación de la interfaz de usuario, diseño de la documentación web y experiencia de usuario (UX).</p>
                         <ul class="social_icon">
-                            <li><a href="mailto:dev5@email.com"><i class="fa fa-envelope-o"></i></a></li>
+                            <li><a href="https://wa.me/+59163263570" target="_blank"><i class="fa fa-whatsapp"></i></a></li>
+                            <li><a href="mailto:atarquic@fcpn.edu.bo"><i class="fa fa-envelope-o"></i></a></li>
                             <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
                             <li><a href="#"><i class="fa fa-github"></i></a></li>
                         </ul>
@@ -110,8 +164,12 @@
                 </div>
 
             </div>
-            </div>
+            
+        </div>
     </div>
+    <footer>
+        <div id="main-footer"></div> 
+    </footer>
 
     <script src="js/jquery.min.js"></script>
     <script src="js/popper.min.js"></script>
@@ -124,8 +182,8 @@
     <script>
         $(function () {
             $("#main-header").load("header.html");
+            $("#main-footer").load("footer.html"); 
         });
     </script>
-    
 </body>
 </html>

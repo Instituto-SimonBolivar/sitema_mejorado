@@ -12,65 +12,123 @@
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
-    <link rel="stylesheet" href="https://netdnbootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
 
+    <style>
+        /* Estilo para el índice lateral */
+        .index-sidebar {
+            position: sticky; 
+            top: 100px; 
+            padding-top: 20px;
+        }
+        .index-sidebar .list-group-item {
+            border: none;
+            padding: 5px 15px;
+            font-size: 14px;
+            color: #495057;
+            border-left: 3px solid transparent;
+        }
+        .index-sidebar .list-group-item.active {
+            background-color: #f8f9fa;
+            color: #007bff;
+            font-weight: bold;
+            border-left: 3px solid #007bff;
+        }
+        .responsive-diagram {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin-top: 20px;
+            text-align: center;
+        }
+    </style>
 </head>
 
 <body class="main-layout">
     <div class="loader_bg">
-        <div class="loader"><img src="images/loading.gif" alt="#" /></div>
+        <div class="loader"><img src="images/loading.gif" alt="#"/></div>
     </div>
 
     <header>
         <div id="main-header"></div> 
     </header>
 
-    <div class="content-page-wrapper">
-        <div class="container">
+    <div class="main-content">
+        <div class="container py-5">
+            <h1 class="text-center mb-5" style="color: #007bff; font-weight: bold;">II. MODELO AMBIENTAL DEL SISTEMA</h1>
+            <hr class="mb-5">
+            
             <div class="row">
-
-                <div class="col-md-3">
-                    <div class="sidebar-toc">
-                        <h3>Índice del Modelo Ambiental</h3>
-                        <ul class="toc-list">
-                            <li><a href="#propositos"> Declaración de Propósitos (D.P)</a></li>
-                            <li><a href="#contexto"> Diagrama de Contexto (D.C)</a></li>
-                            <li><a href="#acontecimientos"> Lista de Acontecimientos (L.A)</a></li>
-                        </ul>
+                <div class="col-md-3 d-none d-md-block">
+                    <div class="index-sidebar">
+                        <h4 class="mb-3" style="color: #007bff;">Modelo Ambiental</h4>
+                        <div class="list-group">
+                            <a class="list-group-item list-group-item-action active" href="#propositos">1. Declaración de Propósitos</a>
+                            <a class="list-group-item list-group-item-action" href="#contexto">2. Diagrama de Contexto</a>
+                            <a class="list-group-item list-group-item-action" href="#acontecimientos">3. Lista de Acontecimientos (L.A)</a>
+                        </div>
                     </div>
                 </div>
 
                 <div class="col-md-9">
-                    <div class="content-section">
-                        <h2>Modelo Ambiental</h2>
-                        <p>El Modelo Ambiental es el primer paso en el Análisis Estructurado, cuyo objetivo es definir los límites, las metas y las interacciones del sistema propuesto con el entorno. Establece "qué" debe hacer el sistema sin entrar en detalles de "cómo" lo hará.</p>
-                        <hr>
+                    
+                    <div id="propositos" class="diagram-box mb-5">
+                        <h2 class="mt-4">1. Declaración de Propósitos del Sistema</h2>
+                        <p><strong>Propósito:</strong> El nuevo Sistema de Gestión Académica y Administrativa del Instituto Simón Bolívar (ITSB) debe ser diseñado para centralizar, automatizar y optimizar todos los procesos críticos de la institución, desde la inscripción y el registro de notas hasta la gestión de personal y la emisión de reportes, garantizando la adaptabilidad a los constantes cambios normativos del sector educativo boliviano.</p>
+                        <p>Debe proveer una plataforma integrada que:</p>
+                        <ul>
+                            <li>Gestione de forma robusta y centralizada la información académica y de pagos de los estudiantes de las cinco sedes.</li>
+                            <li>Permita a los docentes cargar calificaciones y registrar asistencia de forma segura y validada.</li>
+                            <li>Facilite a la Dirección Académica y Administrativa la generación de reportes dinámicos (inscripciones, deserciones, pagos, historiales) para la toma de decisiones.</li>
+                            <li>Integre completamente la gestión de recursos humanos del personal docente y administrativo.</li>
+                            <li>Ofrezca interfaces web diferenciadas y seguras para Administradores, Docentes y Estudiantes.</li>
+                        </ul>
                     </div>
 
-                    <div id="propositos" class="diagram-box">
-                        <h3>1 Declaración de Propósitos (D.P)</h3>
-                        <p><strong>Teoría:</strong> Documento conciso que establece las metas y objetivos de alto nivel del nuevo sistem Responde a la pregunta: "¿Por qué se está construyendo este sistema?" y establece el criterio de éxito del proyecto. Debe ser la visión acordada entre analistas y usuarios.</p>
-                        <p>Ejemplo de contenido: *El propósito del nuevo Sistema de Gestión de Inventario es reducir el tiempo de registro de entrada y salida de materiales en un 30% e incrementar la precisión del inventario físico al 95%, facilitando la toma de decisiones sobre reposición de stock.*</p>
+                    <div id="contexto" class="diagram-box mb-5">
+                        <h2 class="mt-4">2. Diagrama de Contexto (DC)</h2>
+                        <p>El Diagrama de Contexto define el límite del sistema, identificando el sistema central a ser desarrollado (Sistema de Gestión ITSB) y sus interacciones con las entidades externas.</p>
+                        
+                        <h3 class="mt-3">Entidades Externas Clave:</h3>
+                        <ul>
+                            <li><strong>Estudiante:</strong> Usuario que interactúa para inscripción, consulta de notas/pagos, y encuestas.</li>
+                            <li><strong>Docente:</strong> Usuario que interactúa para el registro de calificaciones, asistencia y consulta de carga horaria.</li>
+                            <li><strong>Administrativo (Secretaría/Contabilidad):</strong> Personal encargado de validar pagos, gestionar inscripciones, emitir facturas y generar reportes.</li>
+                            <li><strong>Rectoría/Dirección:</strong> Instancia superior que solicita reportes de rendimiento y toma decisiones estratégicas.</li>
+                            <li><strong>Facturador Electrónico:</strong> Sistema externo para el proceso de facturación y firma electrónica.</li>
+                        </ul>
+
                         <div class="responsive-diagram">
-                            [Espacio reservado para Declaración de Propósitos de la Empresa]
+                            <img src="images/DC.png" alt="#" />
                         </div>
                     </div>
 
-                    <div id="contexto" class="diagram-box">
-                        <h3>2 Diagrama de Contexto (D.C)</h3>
-                        <p><strong>Teoría:</strong> Representación gráfica que muestra el sistema como un único proceso central. Identifica todas las entidades externas (personas, sistemas o dispositivos) que interactúan con el sistema y los flujos de datos principales que cruzan su fronter Es fundamental para delimitar claramente el alcance.</p>
-                        <div class="responsive-diagram">
-                            [Espacio reservado para el Diagrama de Contexto]
-                        </div>
-                    </div>
+                    <div id="acontecimientos" class="diagram-box mb-5">
+                        <h2 class="mt-4">3. Lista de Acontecimientos (L.A)</h2>
+                        <p>Los siguientes son los eventos que el sistema debe reconocer y a los que debe responder, basados en los procesos críticos del ITSB:</p>
+                        
+                        <h3 class="mt-3">Acontecimientos de Flujo de Datos (Input/Solicitud):</h3>
+                        <ul>
+                            <li><strong>El Estudiante solicita inscripción:</strong> El sistema debe registrar la solicitud, verificar requisitos y generar la orden de pago.</li>
+                            <li><strong>El Estudiante realiza un pago:</strong> El sistema recibe la confirmación de pago y emite la factura electrónica.</li>
+                            <li><strong>El Docente registra las calificaciones parciales:</strong> El sistema debe recibir y validar las notas según los parámetros académicos.</li>
+                            <li><strong>El Docente registra la asistencia:</strong> El sistema debe recibir la lista de asistencia y actualizar el registro del estudiante.</li>
+                            <li><strong>El Administrativo ingresa la carga horaria:</strong> El sistema debe registrar las asignaturas, horarios y distribución docente.</li>
+                        </ul>
 
-                    <div id="acontecimientos" class="diagram-box">
-                        <h3>3 Lista de Acontecimientos (L.A)</h3>
-                        <p><strong>Teoría:</strong> Un listado de todos los eventos externos que el sistema debe reconocer y a los que debe responder. Estos eventos pueden ser temporales (un reporte mensual), de flujo de datos (el cliente envía un pedido) o de control (un sensor detecta un fallo). Esta lista es clave para desarrollar el modelo de comportamiento posterior.</p>
-                        <div class="responsive-diagram">
-                            [Espacio reservado para la Lista de Acontecimientos]
-                        </div>
+                        <h3 class="mt-3">Acontecimientos Temporales (Basados en el Tiempo):</h3>
+                        <ul>
+                            <li><strong>Fin de Semestre:</strong> El sistema debe generar automáticamente las actas de calificaciones finales y los reportes de promedios.</li>
+                            <li><strong>Inicio del Período de Inscripción:</strong> El sistema debe activar la funcionalidad de inscripción masiva.</li>
+                            <li><strong>Mensualmente/Bimestralmente:</strong> El sistema debe generar reportes de morosidad, deserción y rendimiento para la Dirección.</li>
+                        </ul>
+
+                        <h3 class="mt-3">Acontecimientos de Control (Estado/Cambio):</h3>
+                        <ul>
+                            <li><strong>Se detecta una irregularidad en el registro de notas:</strong> El sistema debe notificar al supervisor académico.</li>
+                            <li><strong>Una normativa educativa es modificada:</strong> El sistema debe permitir al administrador modificar los parámetros de cálculo de notas/promedios de forma flexible.</li>
+                            <li><strong>El Estudiante finaliza su plan de estudios:</strong> El sistema debe iniciar el proceso de titulación (no completamente integrado, pero el evento debe ser gestionado).</li>
+                        </ul>
                     </div>
 
                 </div>
@@ -87,12 +145,17 @@
     <script src="js/jquery-3.0.0.min.js"></script> 
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
-    <script src="js/custom.js"></script> <script>
+    <script src="js/custom.js"></script> 
+    <script>
         $(function () {
             $("#main-header").load("header.html");
             $("#main-footer").load("footer.html"); 
+            // Script para resaltar el elemento activo en el índice lateral
+            $('.index-sidebar a').on('click', function() {
+                $('.index-sidebar a').removeClass('active');
+                $(this).addClass('active');
+            });
         });
     </script>
-    
 </body>
 </html>
