@@ -16,41 +16,32 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
 
     <style>
-        /* Estilo para el índice lateral */
-        .index-sidebar {
-            position: sticky; 
-            top: 100px; 
-            padding-top: 20px;
+        .diagram-box {
+            background: #fff;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
-        .index-sidebar .list-group-item {
-            border: none;
-            padding: 5px 15px;
-            font-size: 14px;
-            color: #495057;
-            border-left: 3px solid transparent;
-        }
-        .index-sidebar .list-group-item.active {
-            background-color: #f8f9fa;
+        .diagram-box h3 {
             color: #007bff;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
             font-weight: bold;
-            border-left: 3px solid #007bff;
-        }
-        .responsive-diagram {
-            border: 1px solid #ddd;
-            padding: 15px;
-            margin-top: 20px;
-            text-align: center;
         }
         .responsive-diagram img {
-            max-width: 100%; 
+            max-width: 100%;
             height: auto;
+            border: 1px solid #ddd;
+            border-radius: 5px;
         }
     </style>
 </head>
 
 <body class="main-layout">
     <div class="loader_bg">
-        <div class="loader"><img src="images/loading.gif" alt="#"/></div>
+        <div class="loader"><img src="images/loading.gif" alt="#" /></div>
     </div>
 
     <header>
@@ -61,83 +52,73 @@
         <div class="container py-5">
             <h1 class="text-center mb-5" style="color: #007bff; font-weight: bold;">IV. MODELADO ORIENTADO A OBJETOS (UML)</h1>
             <hr class="mb-5">
-            
-            <div class="row">
-                <div class="col-md-3 d-none d-md-block">
-                    <div class="index-sidebar">
-                        <h4 class="mb-3" style="color: #007bff;">Diagramas UML</h4>
-                        <div class="list-group">
-                            <a class="list-group-item list-group-item-action active" href="#introduccion-oo">1. Introducción al Modelado OO</a>
-                            <a class="list-group-item list-group-item-action" href="#diagrama-clases">2. Diagrama de Clases</a>
-                            <a class="list-group-item list-group-item-action" href="#objetos-clave">3. Objetos Clave y Herencia</a>
-                        </div>
-                    </div>
+
+            <div id="casos_uso" class="diagram-box">
+                <h3>1. Diagrama de Casos de Uso de Negocio (CUN)</h3>
+                <div class="responsive-diagram text-center">
+                    <img src="images/CUN_ITSB.png" alt="Diagrama de Casos de Uso del Sistema" class="img-fluid">
+                    <p class="mt-2"><strong>Figura 3:</strong> Diagrama de Casos de Uso de Negocio.</p>
                 </div>
 
-                <div class="col-md-9">
-                    
-                    <div id="introduccion-oo" class="diagram-box mb-5">
-                        <h2 class="mt-4">1. Introducción al Modelado Orientado a Objetos</h2>
-                        <p>El Modelado Orientado a Objetos (OO) se utiliza para conceptualizar el sistema propuesto en términos de clases, atributos, métodos y relaciones, facilitando un diseño modular y escalable que es esencial para la adaptabilidad del sistema del ITSB ante cambios normativos.</p>
-                        <p>Se utiliza el Lenguaje Unificado de Modelado (UML) para describir la estructura estática y dinámica del sistema, priorizando la flexibilidad en la gestión de la información académica y administrativa multi-sede.</p>
-                        <p>Los principales diagramas utilizados para la fase de diseño son:</p>
-                        <ul>
-                            <li><strong>Diagrama de Clases:</strong> Muestra la estructura estática del sistema.</li>
-                            <li><strong>Diagrama de Casos de Uso:</strong> Define las funcionalidades del sistema desde la perspectiva del usuario (Actores).</li>
-                            <li><strong>Diagrama de Secuencia:</strong> Describe la interacción dinámica entre objetos para un escenario específico (ej. Registro de Notas).</li>
-                        </ul>
-                    </div>
+                <h4>Actores y Casos de Uso Clave</h4>
+                <table class="table table-bordered table-striped">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>Tipo</th>
+                            <th>ID</th>
+                            <th>Descripción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Actor</td>
+                            <td>AN1</td>
+                            <td>Administrador </td>
+                        </tr>
+                        <tr>
+                            <td>Actor</td>
+                            <td>AN2</td>
+                            <td>Docente</td>
+                        </tr>
+                        <tr>
+                            <td>Actor</td>
+                            <td>AN3</td>
+                            <td>Estudiante </td>
+                        </tr>
+                        <tr>
+                            <td>Caso de Uso</td>
+                            <td>CUN1</td>
+                            <td>Gestión de curso </td>
+                        </tr>
+                        <tr>
+                            <td>Caso de Uso</td>
+                            <td>CUN2</td>
+                            <td>Gestión de registro </td>
+                        </tr>
+                        <tr>
+                            <td>Caso de Uso</td>
+                            <td>CUN4</td>
+                            <td>Solicitud registro </td>
+                        </tr>
+                        <tr>
+                            <td>Caso de Uso</td>
+                            <td>CUN6</td>
+                            <td>Solicitud Historial académico </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
 
-                    <div id="diagrama-clases" class="diagram-box mb-5">
-                        <h2 class="mt-4">2. Diagrama de Clases</h2>
-                        <p>El Diagrama de Clases es la pieza central del diseño, ya que mapea directamente las entidades clave del negocio (Estudiante, Docente, Asignatura, Pago, Sede) y define cómo se relacionan entre sí a través de la herencia, composición y asociación.  </p>
-                        
-                        <h3 class="mt-3">Relaciones y Cardinalidades:</h3>
-                        <ul>
-                            <li><strong>Asociación:</strong> Una <strong>Sede</strong> se asocia con múltiples <strong>Estudiantes</strong> y <strong>Docentes</strong> (1:N), reflejando la distribución geográfica del ITSB.</li>
-                            <li><strong>Herencia:</strong> Se utiliza una clase abstracta <strong>Persona</strong> o <strong>Usuario</strong> de la cual heredan las clases específicas (Estudiante, Docente, Administrativo), optimizando la gestión de credenciales y datos personales.</li>
-                            <li><strong>Composición:</strong> La entidad <strong>Registro_Academico</strong> o <strong>Inscripción</strong> está fuertemente acoplada a <strong>Estudiante</strong> y <strong>Asignatura</strong>.</li>
-                        </ul>
-                        
-                        <div class="responsive-diagram">
-                            <h4>[Diagrama de Clases UML - Sistema ITSB]</h4>
-                            <img src="images/diagrama_clases.png" alt="Diagrama de Clases UML del Sistema ITSB" />
-                        </div>
-                    </div>
-
-                    <div id="objetos-clave" class="diagram-box mb-5">
-                        <h2 class="mt-4">3. Objetos Clave y Principios de Herencia</h2>
-                        <p>Para abordar la rigidez del sistema actual, el diseño OO introduce la herencia y el polimorfismo, que permiten al sistema manejar diferentes tipos de usuarios y procesos (como la validación de notas) con una lógica flexible.</p>
-                        
-                        <h3 class="mt-3">Manejo de Usuarios (Herencia):</h3>
-                        <table class="table table-bordered table-striped">
-                            <thead class="thead-dark">
-                                <tr>
-                                    <th>Clase Padre</th>
-                                    <th>Clases Hijas</th>
-                                    <th>Ventaja OO</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><strong>Usuario</strong> (o Persona)</td>
-                                    <td>Estudiante, Docente, Administrador</td>
-                                    <td>Centraliza atributos comunes (Nombre, CI, Sede, Credenciales) y permite polimorfismo en el acceso al sistema.</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Proceso_Academico</strong></td>
-                                    <td>Inscripción, Carga_Nota, Cierre_Semestre</td>
-                                    <td>Permite definir un método base <code>Ejecutar()</code> que es implementado de forma diferente por cada proceso, facilitando la adaptación a normativas cambiantes.</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        
-                        <h3 class="mt-3">Abstracción de Sede:</h3>
-                        <p>La clase **Sede** encapsula los datos específicos de ubicación (La Paz, Oruro, etc.) y maneja la asociación con otras clases, asegurando que el sistema sea capaz de escalar a las cinco sedes del ITSB sin duplicidad de lógica de negocio.</p>
-                    </div>
-
+            <div id="clases" class="diagram-box">
+                <h3>2. Diagrama de Clases</h3>
+                <p>El Diagrama de Clases define la estructura estática del sistema. Muestra las clases que componen el sistema, sus atributos, operaciones (métodos) y las relaciones entre ellas (herencia, composición y agregación).</p>
+                
+                <div class="responsive-diagram text-center">
+                    <img src="images/diagrama_clases.png" alt="Diagrama de Clases del Sistema de Gestión Académica" class="img-fluid">
+                    <p class="mt-2"><strong>Figura 4:</strong> Diagrama de Clases que modela la estructura de datos y lógica de la aplicación.</p>
                 </div>
             </div>
+
         </div>
     </div>
     <footer>
@@ -155,11 +136,7 @@
         $(function () {
             $("#main-header").load("header.html");
             $("#main-footer").load("footer.html"); 
-            // Script para resaltar el elemento activo en el índice lateral
-            $('.index-sidebar a').on('click', function() {
-                $('.index-sidebar a').removeClass('active');
-                $(this).addClass('active');
-            });
+            $('[data-toggle="tooltip"]').tooltip();
         });
     </script>
 </body>
